@@ -9,7 +9,7 @@ module.exports = {
     if(!user)
       user = await User.create({ email });
     else
-      return res.json({error: "Email Já Cadastrado! ", user: user})
+      return res.json({msg: "Bem Vindo(a) Novamente! ", ...user._doc})
   
     return res.json(user);
   }
